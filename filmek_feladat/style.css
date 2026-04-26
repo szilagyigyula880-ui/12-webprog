@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #0b1220;
+    color: white;
+}
+
+.page-layout {
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background: #111827;
+}
+
+.logo {
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+
+.hero {
+    padding: 50px;
+    background: linear-gradient(90deg, #3b82f6, #9333ea);
+}
+
+.hero-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: black;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+
+.content-layout {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+
+aside {
+    background: #111827;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.side-menu {
+    list-style: none;
+}
+
+.side-menu li {
+    margin: 10px 0;
+}
+
+
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 200px;
+    gap: 15px;
+}
+
+
+.card:nth-child(1) {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.card:nth-child(4) {
+    grid-column: span 2;
+}
+
+
+.card {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.card p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background: rgba(0,0,0,0.6);
+}
+
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #111827;
+}
+
+.card:hover {
+    transform: scale(1.03);
+    transition: 0.2s;
+}
+
+@media (max-width: 768px) {
+    .content-layout {
+        grid-template-columns: 1fr;
+    }
+}
